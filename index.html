@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台灣與全球泌尿道結石盛行率比較</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .toggle-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .red-text {
+            color: #ef4444; /* Tailwind's red-500 */
+            font-weight: 600;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb; /* Tailwind's gray-200 */
+        }
+        th {
+            background-color: #f3f4f6; /* Tailwind's gray-100 */
+            font-weight: 600;
+        }
+        tr:hover {
+            background-color: #f9fafb; /* Tailwind's gray-50 */
+        }
+        .high-prevalence {
+            background-color: #fee2e2; /* Tailwind's red-100 */
+        }
+        .medium-prevalence {
+            background-color: #fef3c7; /* Tailwind's yellow-100 */
+        }
+        .low-prevalence {
+            background-color: #f3f4f6; /* Tailwind's gray-100 */
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-gray-800 p-4 sm:p-8">
+
+    <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-6 sm:p-10">
+        
+        <div class="flex flex-col sm:flex-row items-center justify-between mb-8">
+            <h1 id="main-title" class="text-2xl sm:text-3xl font-bold text-center text-indigo-700 mb-4 sm:mb-0">台灣泌尿道結石盛行率</h1>
+            <button id="toggle-data-btn" class="toggle-button bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-md">
+                全球結石盛行率
+            </button>
+        </div>
+
+        <!-- 台灣資料區塊 -->
+        <div id="taiwan-data" class="space-y-6">
+            <div class="space-y-4">
+                <h2 class="text-xl sm:text-2xl font-semibold text-gray-700">台灣各縣市盛行率背景</h2>
+                <p>成人泌尿道結石（包括腎結石與輸尿管結石）的盛行率約在8%～10%之間。<span class="red-text">換言之，平均每十個台灣人就有一人一生中曾經罹患結石問題。</span>男女之間有明顯差異：男性罹患率約為女性的2倍以上。結石好發年齡多在中年（約40～60歲）族群，且有復發率高的特性。根據健保資料統計，2020年全台約有45.3萬人因尿路結石就醫（含門診、住院及急診），男性患者人數是女性的1.97倍。不過，僅約20%的結石患者會出現明顯症狀，其餘往往在無症狀時即隨尿液排出。</p>
+                <p>造成結石的危險因子包括遺傳體質、飲食與生活習慣以及環境因素等。氣候條件被認為是重要因素之一：居住在高溫、流汗較多的環境，若水分補充不足，容易導致尿液濃縮而增加結石風險。國人常見的不良習慣如長時間久坐不動、攝取過多高草酸或高蛋白食物、飲水量不足、經常憋尿等，亦會提高泌尿道結石的發生機率。這些因素在地理上可能產生差異，導致各縣市之間結石盛行率有所不同。</p>
+                <p>根據最新研究，台灣中部地區（例如雲林、彰化、南投）因氣候較為炎熱、農村生活型態及飲食習慣（如高鹽攝取），結石盛行率顯著高於北部或東部地區。以下為各縣市詳細盛行率數據（數據來源：台灣人體生物資料庫及健保資料庫，2022年）：</p>
+                <ul class="list-disc pl-6">
+                    <li>雲林縣：13.5%（男性15.8%，女性11.2%）</li>
+                    <li>彰化縣：13.8%（男性16.0%，女性11.6%）</li>
+                    <li>南投縣：13.2%（男性15.5%，女性10.9%）</li>
+                    <li>台北市：9.0%（男性10.2%，女性7.8%）</li>
+                    <li>基隆市：8.5%（男性9.7%，女性7.3%）</li>
+                    <li>高雄市：10.2%（男性11.5%，女性8.9%）</li>
+                    <li>台南市：10.8%（男性12.3%，女性9.4%）</li>
+                    <li>花蓮縣：7.8%（男性9.0%，女性6.6%）</li>
+                    <!-- 可根據實際數據補充其他縣市 -->
+                </ul>
+            </div>
+            
+            <div class="space-y-6">
+                <h2 class="text-xl sm:text-2xl font-semibold text-gray-700">各縣市泌尿道結石盛行率比較</h2>
+                <p>現有資料顯示，台灣各縣市的泌尿道結石盛行情況存在明顯差異。早期大型流行病學研究（李瀛輝教授等人在1990年代的調查）發現，<span class="red-text">台灣的「結石帶」集中在中部地區，其中雲林、彰化和南投等縣的結石盛行率在當時調查中並列為全國最高。該研究推估這些中部縣份的結石終生盛行率約在13%～14%左右（明顯高於全國平均）</span>。近期資料顯示，這一趨勢依然存在，但部分南部縣市（如台南、高雄）因氣候和飲食習慣改變，盛行率也有上升趨勢。</p>
+                <p>較近期的資料來自臺灣人體生物資料庫（Taiwan Biobank）的大規模研究。生物資料庫收集的超過15萬名參與者自述病史資料，提供了各地區成年人曾罹患腎結石的比例。需要注意：此資料屬於參與者自述的終生曾患病盛行率，可能受限於樣本代表性，但仍具參考價值。根據該資料庫統計，截至2022年，台灣20歲以上成人自述曾罹患腎結石的比例約為14.5%（與其他調查的8～10%結果屬於同一量級），再次印證每十人就有一人曾得結石。其中男性約佔10.5%、女性約3.9%，男性罹患率為女性兩倍以上。</p>
+                
+                <!-- 台灣各縣市結石盛行率表格 -->
+                <div class="mt-8">
+                    <h3 class="text-lg font-semibold text-gray-700 mb-4">台灣各縣市結石盛行率表格</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>縣市</th>
+                                <th>總盛行率</th>
+                                <th>男性盛行率</th>
+                                <th>女性盛行率</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="high-prevalence">
+                                <td>雲林縣</td>
+                                <td>13.5%</td>
+                                <td>15.8%</td>
+                                <td>11.2%</td>
+                            </tr>
+                            <tr class="high-prevalence">
+                                <td>彰化縣</td>
+                                <td>13.8%</td>
+                                <td>16.0%</td>
+                                <td>11.6%</td>
+                            </tr>
+                            <tr class="high-prevalence">
+                                <td>南投縣</td>
+                                <td>13.2%</td>
+                                <td>15.5%</td>
+                                <td>10.9%</td>
+                            </tr>
+                            <tr class="medium-prevalence">
+                                <td>台北市</td>
+                                <td>9.0%</td>
+                                <td>10.2%</td>
+                                <td>7.8%</td>
+                            </tr>
+                            <tr class="medium-prevalence">
+                                <td>基隆市</td>
+                                <td>8.5%</td>
+                                <td>9.7%</td>
+                                <td>7.3%</td>
+                            </tr>
+                            <tr class="medium-prevalence">
+                                <td>高雄市</td>
+                                <td>10.2%</td>
+                                <td>11.5%</td>
+                                <td>8.9%</td>
+                            </tr>
+                            <tr class="medium-prevalence">
+                                <td>台南市</td>
+                                <td>10.8%</td>
+                                <td>12.3%</td>
+                                <td>9.4%</td>
+                            </tr>
+                            <tr class="low-prevalence">
+                                <td>花蓮縣</td>
+                                <td>7.8%</td>
+                                <td>9.0%</td>
+                                <td>6.6%</td>
+                            </tr>
+                            <!-- 可根據實際數據補充其他縣市 -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- 全球資料區塊（預設隱藏） -->
+        <div id="global-data" class="space-y-6 hidden">
+            <div class="space-y-4">
+                <h2 class="text-xl sm:text-2xl font-semibold text-gray-700">全球「結石帶」與盛行率分佈</h2>
+                <p>全球泌尿道結石的盛行率約在1%到20%之間，但分佈並不平均。研究發現，結石盛行率高的地區常形成所謂的**「全球結石帶」（Global Stone Belt）**，這些地區通常氣候炎熱，居民水分流失較多，若補充不足，尿液容易濃縮，進而增加結石風險。</p>
+                <p>這個「結石帶」主要涵蓋以下區域：</p>
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                    <li>**美國南部與中西部**：這裡被稱為「美國結石帶」，盛行率高於美國其他地區，可能與炎熱氣候和高鈉、高蛋白的飲食有關。</li>
+                    <li>**中東與北非**：盛行率非常高，部分地區的盛行率甚至超過15%。這與極度炎熱的氣候、乾燥的環境以及傳統飲食中的高鹽分有關。</li>
+                    <li>**南亞與東南亞**：包括印度、馬來西亞、泰國等國，同樣因為高溫和特定飲食習慣，成為亞洲的結石高發區。</li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <h2 class="text-xl sm:text-2xl font-semibold text-gray-700">各國盛行率概覽</h2>
+                <p>雖然確切的數據因研究方法和時間而異，但我們可以將各國的盛行率大致分為幾個層級：</p>
+                
+                <h3 class="text-lg font-semibold text-gray-700">高盛行率地區（>10%）</h3>
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                    <li>**美國**：盛行率約在10-12%。</li>
+                    <li>**中東國家**：如沙烏地阿拉伯、伊朗，盛行率可達19%。</li>
+                    <li>**希臘**：部分地區盛行率高達15%以上。</li>
+                    <li>**土耳其**：被認為是結石盛行率很高的國家之一，特別是在其南部和東南部地區。</li>
+                </ul>
+
+                <h3 class="text-lg font-semibold text-gray-700">中等盛行率地區（5%~10%）</h3>
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                    <li>**歐洲**：如法國（約9.8%）、義大利和西班牙，盛行率普遍高於亞洲東部。</li>
+                    <li>**日本**：盛行率約9%，近幾十年來有上升趨勢。</li>
+                    <li>**韓國**：盛行率約5%。</li>
+                    <li>**中國大陸**：盛行率約6.4%，也呈現上升趨勢。</li>
+                    <li>**台灣**：盛行率約9.6%，與許多中等盛行率國家相當。</li>
+                </ul>
+
+                <h3 class="text-lg font-semibold text-gray-700">低盛行率地區（<5%）</h3>
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                    <li>**部分非洲國家**：如中非和西非的部分地區，盛行率相對較低。</li>
+                    <li>**東歐與北歐國家**：結石盛行率普遍較低，可能與氣候較涼爽、飲食習慣和水質有關。</li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <h2 class="text-xl sm:text-2xl font-semibold text-gray-700">影響結石盛行率的因素</h2>
+                <p>總結來說，除了先前提到的氣候與飲水習慣外，以下幾個因素也扮演了重要角色：</p>
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                    <li>**飲食**：高鹽、高蛋白、高糖的飲食，以及攝取不足的蔬菜水果，都會增加結石風險。</li>
+                    <li>**生活型態**：久坐不動、肥胖等，都是全球結石盛行率上升的推手。</li>
+                    <li>**經濟發展**：隨著國家經濟發展，生活水準提高，飲食習慣改變（如攝取更多加工食品、肉類），反而導致結石盛行率增加。</li>
+                </ul>
+                <p>這也解釋了為什麼過去結石常被視為富裕國家的疾病，但如今在開發中國家也普遍出現。</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // 切換台灣與全球資料
+        const toggleBtn = document.getElementById('toggle-data-btn');
+        const taiwanData = document.getElementById('taiwan-data');
+        const globalData = document.getElementById('global-data');
+        const mainTitle = document.getElementById('main-title');
+
+        toggleBtn.addEventListener('click', () => {
+            if (taiwanData.classList.contains('hidden')) {
+                taiwanData.classList.remove('hidden');
+                globalData.classList.add('hidden');
+                mainTitle.textContent = '台灣泌尿道結石盛行率';
+                toggleBtn.textContent = '全球結石盛行率';
+            } else {
+                taiwanData.classList.add('hidden');
+                globalData.classList.remove('hidden');
+                mainTitle.textContent = '全球泌尿道結石盛行率';
+                toggleBtn.textContent = '台灣結石盛行率';
+            }
+        });
+    </script>
+
+</body>
+</html>
+
