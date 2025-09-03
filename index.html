@@ -52,11 +52,16 @@
 
     <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-6 sm:p-10">
         
-        <div class="flex flex-col sm:flex-row items-center justify-between mb-8">
-            <h1 id="main-title" class="text-2xl sm:text-3xl font-bold text-center text-indigo-700 mb-4 sm:mb-0">台灣泌尿道結石盛行率</h1>
-            <button id="toggle-data-btn" class="toggle-button bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-md">
-                全球結石盛行率
-            </button>
+        <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-between mb-8 space-y-4 sm:space-y-0 sm:space-x-4">
+            <h1 id="main-title" class="text-2xl sm:text-3xl font-bold text-center text-indigo-700">台灣泌尿道結石盛行率</h1>
+            <div class="flex space-x-2">
+                <button id="toggle-data-btn" class="toggle-button bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-md">
+                    全球結石盛行率
+                </button>
+                <button id="toggle-qa-btn" class="toggle-button bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-md">
+                    結石Q&A
+                </button>
+            </div>
         </div>
 
         <!-- 台灣資料區塊 -->
@@ -75,7 +80,6 @@
                     <li>高雄市：10.2%（男性11.5%，女性8.9%）</li>
                     <li>台南市：10.8%（男性12.3%，女性9.4%）</li>
                     <li>花蓮縣：7.8%（男性9.0%，女性6.6%）</li>
-                    <!-- 可根據實際數據補充其他縣市 -->
                 </ul>
             </div>
             
@@ -103,6 +107,212 @@
                                 <td>15.8%</td>
                                 <td>11.2%</td>
                             </tr>
+                            <tr class="high-prevalence">
+                                <td>彰化縣</td>
+                                <td>13.8%</td>
+                                <td>16.0%</td>
+                                <td>11.6%</td>
+                            </tr>
+                            <tr class="high-prevalence">
+                                <td>南投縣</td>
+                                <td>13.2%</td>
+                                <td>15.5%</td>
+                                <td>10.9%</td>
+                            </tr>
+                            <tr class="medium-prevalence">
+                                <td>台北市</td>
+                                <td>9.0%</td>
+                                <td>10.2%</td>
+                                <td>7.8%</td>
+                            </tr>
+                            <tr class="medium-prevalence">
+                                <td>基隆市</td>
+                                <td>8.5%</td>
+                                <td>9.7%</td>
+                                <td>7.3%</td>
+                            </tr>
+                            <tr class="medium-prevalence">
+                                <td>高雄市</td>
+                                <td>10.2%</td>
+                                <td>11.5%</td>
+                                <td>8.9%</td>
+                            </tr>
+                            <tr class="medium-prevalence">
+                                <td>台南市</td>
+                                <td>10.8%</td>
+                                <td>12.3%</td>
+                                <td>9.4%</td>
+                            </tr>
+                            <tr class="low-prevalence">
+                                <td>花蓮縣</td>
+                                <td>7.8%</td>
+                                <td>9.0%</td>
+                                <td>6.6%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- 全球資料區塊（預設隱藏） -->
+        <div id="global-data" class="space-y-6 hidden">
+            <div class="space-y-4">
+                <h2 class="text-xl sm:text-2xl font-semibold text-gray-700">全球「結石帶」與盛行率分佈</h2>
+                <p>全球泌尿道結石的盛行率約在1%到20%之間，但分佈並不平均。研究發現，結石盛行率高的地區常形成所謂的**「全球結石帶」（Global Stone Belt）**，這些地區通常氣候炎熱，居民水分流失較多，若補充不足，尿液容易濃縮，進而增加結石風險。</p>
+                <p>這個「結石帶」主要涵蓋以下區域：</p>
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                    <li>**美國南部與中西部**：這裡被稱為「美國結石帶」，盛行率高於美國其他地區，可能與炎熱氣候和高鈉、高蛋白的飲食有關。</li>
+                    <li>**中東與北非**：盛行率非常高，部分地區的盛行率甚至超過15%。這與極度炎熱的氣候、乾燥的環境以及傳統飲食中的高鹽分有關。</li>
+                    <li>**南亞與東南亞**：包括印度、馬來西亞、泰國等國，同樣因為高溫和特定飲食習慣，成為亞洲的結石高發區。</li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <h2 class="text-xl sm:text-2xl font-semibold text-gray-700">各國盛行率概覽</h2>
+                <p>雖然確切的數據因研究方法和時間而異，但我們可以將各國的盛行率大致分為幾個層級：</p>
+                
+                <h3 class="text-lg font-semibold text-gray-700">高盛行率地區（>10%）</h3>
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                    <li>**美國**：盛行率約在10-12%。</li>
+                    <li>**中東國家**：如沙烏地阿拉伯、伊朗，盛行率可達19%。</li>
+                    <li>**希臘**：部分地區盛行率高達15%以上。</li>
+                    <li>**土耳其**：被認為是結石盛行率很高的國家之一，特別是在其南部和東南部地區。</li>
+                </ul>
+
+                <h3 class="text-lg font-semibold text-gray-700">中等盛行率地區（5%~10%）</h3>
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                    <li>**歐洲**：如法國（約9.8%）、義大利和西班牙，盛行率普遍高於亞洲東部。</li>
+                    <li>**日本**：盛行率約9%，近幾十年來有上升趨勢。</li>
+                    <li>**韓國**：盛行率約5%。</li>
+                    <li>**中國大陸**：盛行率約6.4%，也呈現上升趨勢。</li>
+                    <li>**台灣**：盛行率約9.6%，與許多中等盛行率國家相當。</li>
+                </ul>
+
+                <h3 class="text-lg font-semibold text-gray-700">低盛行率地區（<5%）</h3>
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                    <li>**部分非洲國家**：如中非和西非的部分地區，盛行率相對較低。</li>
+                    <li>**東歐與北歐國家**：結石盛行率普遍較低，可能與氣候較涼爽、飲食習慣和水質有關。</li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <h2 class="text-xl sm:text-2xl font-semibold text-gray-700">影響結石盛行率的因素</h2>
+                <p>總結來說，除了先前提到的氣候與飲水習慣外，以下幾個因素也扮演了重要角色：</p>
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                    <li>**飲食**：高鹽、高蛋白、高糖的飲食，以及攝取不足的蔬菜水果，都會增加結石風險。</li>
+                    <li>**生活型態**：久坐不動、肥胖等，都是全球結石盛行率上升的推手。</li>
+                    <li>**經濟發展**：隨著國家經濟發展，生活水準提高，飲食習慣改變（如攝取更多加工食品、肉類），反而導致結石盛行率增加。</li>
+                </ul>
+                <p>這也解釋了為什麼過去結石常被視為富裕國家的疾病，但如今在開發中國家也普遍出現。</p>
+            </div>
+        </div>
+
+        <!-- 結石 Q&A 區塊（預設隱藏） -->
+        <div id="qa-data" class="space-y-6 hidden">
+            <h2 class="text-xl sm:text-2xl font-bold text-center text-green-700">結石 Q&A</h2>
+            <div class="space-y-6">
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-700">Q1: 泌尿道結石是什麼？</h3>
+                    <p class="text-gray-600 mt-2">泌尿道結石是由於尿液中的礦物質（如鈣、草酸鹽、尿酸等）濃度過高，結晶沉澱而形成的硬塊。它們可以在腎臟、輸尿管、膀胱或尿道中產生，最常見的是腎結石。</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-700">Q2: 結石會有什麼症狀？</h3>
+                    <p class="text-gray-600 mt-2">小於0.5公分的結石可能沒有症狀，會自行排出。但較大的結石在移動時，可能會造成劇烈疼痛，通常是從側腰延伸至腹股溝，俗稱「結石痛」或「絞痛」。其他症狀還可能包括血尿、噁心、嘔吐、發燒或排尿困難等。</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-700">Q3: 我每天應該喝多少水？</h3>
+                    <p class="text-gray-600 mt-2">預防結石最有效的方法就是多喝水。建議每天至少飲用2,000至3,000毫升的水，以保持尿液清澈，稀釋尿液中的礦物質濃度，減少結晶形成。目標是讓尿液顏色像淡檸檬水一樣。</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-700">Q4: 什麼食物會增加結石風險？</h3>
+                    <p class="text-gray-600 mt-2">高草酸食物（如菠菜、巧克力、堅果）、高鹽分和高蛋白飲食都可能增加結石風險。過量的鈉會增加尿液中的鈣排泄，而過多的動物性蛋白（如紅肉、海鮮）會增加尿酸和鈣的排泄。</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-700">Q5: 哪些食物可以幫助預防結石？</h3>
+                    <p class="text-gray-600 mt-2">富含檸檬酸的水果（如檸檬、柳橙、葡萄柚）能與尿液中的鈣結合，抑制結晶形成。此外，適量攝取含鈣食物（如乳製品）反而能降低腸道對草酸的吸收，有助於預防結石。保持均衡飲食非常重要。</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-700">Q6: 為什麼夏天比較容易得結石？</h3>
+                    <p class="text-gray-600 mt-2">夏天高溫，身體會大量流汗以散熱，導致水分流失。如果沒有及時補充，尿液會變得濃縮，尿液中結石形成的物質濃度就會升高，增加結石形成的機率。這也是台灣「結石帶」多位於炎熱地區的原因之一。</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-700">Q7: 體外震波碎石術是什麼？</h3>
+                    <p class="text-gray-600 mt-2">體外震波碎石術是一種非侵入性的治療方法。它利用機器產生的震波，透過皮膚傳遞到體內的結石，將結石震碎成細小顆粒，之後這些碎屑會隨尿液排出體外。此方法主要用於較小且位置適當的結石。</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-700">Q8: 結石會自己排出來嗎？</h3>
+                    <p class="text-gray-600 mt-2">是的，大多數小於0.5公分的結石會隨著大量水分的攝取，在排尿時自行排出。但如果結石較大或卡在輸尿管中，則可能需要醫療介入。若有持續疼痛或血尿等症狀，應立即就醫。</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-700">Q9: 為什麼男性比女性容易得結石？</h3>
+                    <p class="text-gray-600 mt-2">這與性別、飲食、荷爾蒙和生活習慣等多重因素有關。男性的飲食習慣常攝取較多動物性蛋白和高鹽食物，且流汗量較大，水分補充不足的風險也較高。另外，部分研究指出女性體內的雌激素可能對結石有保護作用。</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-700">Q10: 結石會復發嗎？如何預防？</h3>
+                    <p class="text-gray-600 mt-2">泌尿道結石的復發率很高，約有一半的患者在五年內會再次發作。預防復發的最佳方法是：多喝水、保持均衡飲食（特別是減少高鹽、高蛋白和高草酸食物）、適量運動，並定期追蹤檢查。如有需要，醫師也會開立藥物來協助預防。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 切換台灣與全球資料
+        const toggleBtn = document.getElementById('toggle-data-btn');
+        const qaToggleBtn = document.getElementById('toggle-qa-btn');
+        const taiwanData = document.getElementById('taiwan-data');
+        const globalData = document.getElementById('global-data');
+        const qaData = document.getElementById('qa-data');
+        const mainTitle = document.getElementById('main-title');
+
+        function hideAllSections() {
+            taiwanData.classList.add('hidden');
+            globalData.classList.add('hidden');
+            qaData.classList.add('hidden');
+        }
+
+        function showTaiwanData() {
+            hideAllSections();
+            taiwanData.classList.remove('hidden');
+            mainTitle.textContent = '台灣泌尿道結石盛行率';
+            toggleBtn.textContent = '全球結石盛行率';
+            qaToggleBtn.textContent = '結石Q&A';
+        }
+
+        // Event listener for the data toggle button (Taiwan/Global)
+        toggleBtn.addEventListener('click', () => {
+            if (globalData.classList.contains('hidden')) {
+                hideAllSections();
+                globalData.classList.remove('hidden');
+                mainTitle.textContent = '全球泌尿道結石盛行率';
+                toggleBtn.textContent = '台灣結石盛行率';
+                qaToggleBtn.textContent = '結石Q&A';
+            } else {
+                showTaiwanData();
+            }
+        });
+
+        // Event listener for the Q&A button
+        qaToggleBtn.addEventListener('click', () => {
+            if (qaData.classList.contains('hidden')) {
+                hideAllSections();
+                qaData.classList.remove('hidden');
+                mainTitle.textContent = '結石Q&A';
+                toggleBtn.textContent = '全球結石盛行率';
+                qaToggleBtn.textContent = '返回盛行率資訊';
+            } else {
+                showTaiwanData();
+            }
+        });
+
+        // Initially show Taiwan data
+        document.addEventListener('DOMContentLoaded', () => {
+            showTaiwanData();
+        });
+    </script>
+</body>
+</html>
+
                             <tr class="high-prevalence">
                                 <td>彰化縣</td>
                                 <td>13.8%</td>
